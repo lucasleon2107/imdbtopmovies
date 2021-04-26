@@ -19,7 +19,7 @@ import org.springframework.stereotype.Service
 class ImdbScraperService {
 
     @Cacheable("movies")
-    fun getAllMovies(): MutableList<Movie> {
+    fun getAllMovies(): List<Movie> {
         val allMovies = mutableListOf<Movie>()
 
         (1..1000 step 250).forEach { i ->
